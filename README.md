@@ -24,5 +24,6 @@
 [日本語自然言語処理で必須の前処理まとめ(Dockerによる環境構築込み)](https://qiita.com/Keyskey/items/9f5f6c414e0f89a4f931)  
 
 ## ハマリポイント
-Dockerfile内のapt-get installに「-y」オプションを忘れるとエラーとなる
+Dockerfile内のapt-get installに「-y」オプションを忘れるとエラーとなる。  
+Docker初学者だったので一連の流れを理解するのに時間がかかった。
 
