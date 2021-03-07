@@ -32,6 +32,14 @@ sudo docker build --rm -t pytorch_env:latest .
 sudo docker run --rm -it -v $PWD:/home/workspase --name pytorch_container pytorch_env:latest /bin/bash
 ``
 
+## docker-compose を利用
+docker-compose は複数のコンテナを同時に立ち上げてくれるもの。
+オプションを記述することで各コンテナの起動時の設定などができる。
+これを利用することによってrunコマンド時の煩雑なオプション指定をしなくてもよくなる。
+``
+docker-compose up -d
+``
+
 ## 参考にしたサイト
 [Dockerで環境構築するための最低限の概念理解](https://qiita.com/minato-naka/items/e9cd026747693759800c)  
 [docker と docker-compose の初歩](https://qiita.com/hiyuzawa/items/81490020568417d85e86)  
