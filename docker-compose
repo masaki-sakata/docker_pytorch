@@ -1,11 +1,11 @@
 version: "3"
 services:
   app:
-    container_name: "pytorch_machine_learning"
+    container_name: "pytorch_container"
     build:
       context: .
       dockerfile: ./Dockerfile
-    image: pytorch_machine_learning
-    volumes: 
+    image: pytorch_container
+    volumes:
         - $PWD:/home/workspase
     tty: true
