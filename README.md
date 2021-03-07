@@ -33,9 +33,9 @@ sudo docker run --rm -it -v $PWD:/home/workspase --name pytorch_container pytorc
 ``
 
 ## docker-compose を利用
-docker-compose は複数のコンテナを同時に立ち上げてくれるもの。
-オプションを記述することで各コンテナの起動時の設定などができる。
-これを利用することによってrunコマンド時の煩雑なオプション指定をしなくてもよくなる。
+docker-compose は複数のコンテナを同時に立ち上げてくれるもの。  
+オプションを記述することで各コンテナの起動時の設定などができる。  
+これを利用することによってrunコマンド時の煩雑なオプション指定をしなくてもよくなる。  
 ``
 docker-compose up -d
 ``
