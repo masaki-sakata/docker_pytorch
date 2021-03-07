@@ -25,11 +25,11 @@ Docker version 20.10.3
 
 ## イメージ作成：buildコマンド
 ``
-sudo docker build --rm -t pytorch_env:latest .
+docker build --rm -t pytorch_env:latest .
 ``
 ## コンテナを作成&起動：runコマンド
 ``
-sudo docker run --rm -it -v $PWD:/home/workspase --name pytorch_container pytorch_env:latest /bin/bash
+docker run --rm -it -v $PWD:/home/workspase --name pytorch_container pytorch_env:latest /bin/bash
 ``
 
 ## docker-compose を利用
