@@ -1,4 +1,4 @@
-# shinra_Tutorial
+# shinra_Tutorial 環境構築
 森羅プロジェクトの日本語構造化タスクのチュートリアル
 
 # Docker環境構築
@@ -16,6 +16,15 @@
 - matplotlib
 - scikit-learn
 - seaborn
+
+## buildコマンド
+``
+sudo docker build --rm -t pytorch_env:latest .
+``
+## runコマンド
+``
+sudo docker run --rm -it -v $PWD:/home/workspase --name pytorch_container pytorch_env:latest /bin/bash
+``
 
 ## 参考にしたサイト
 [Dockerで環境構築するための最低限の概念理解](https://qiita.com/minato-naka/items/e9cd026747693759800c)  
