@@ -2,6 +2,12 @@
 森羅プロジェクトの日本語構造化タスクのチュートリアル
 
 # Docker環境構築
+## バージョン
+``
+Docker version 20.10.3
+``
+
+
 
 ## パッケージ
 - [pytorch](https://hub.docker.com/r/pytorch/pytorch) (docker hubからPull)
@@ -17,11 +23,11 @@
 - scikit-learn
 - seaborn
 
-## buildコマンド
+## イメージ作成：buildコマンド
 ``
 sudo docker build --rm -t pytorch_env:latest .
 ``
-## runコマンド
+## コンテナを作成&起動：runコマンド
 ``
 sudo docker run --rm -it -v $PWD:/home/workspase --name pytorch_container pytorch_env:latest /bin/bash
 ``
