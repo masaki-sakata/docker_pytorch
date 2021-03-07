@@ -3,7 +3,10 @@ FROM pytorch/pytorch:latest
 
 RUN apt-get update  && \
     apt-get upgrade -y && \
-    apt-get install vim && \
+    apt-get install -y --reinstall build-essential && \
+    apt-get install -y sudo && \
+    apt-get install -y vim  && \
+    apt-get install -y git && \
     apt-get install -y curl && \
     apt-get install -y file && \
     ## mecab関連インストール
@@ -19,6 +22,7 @@ RUN apt-get update  && \
     rm -rf /var/lib/apt/lists/* && \
     # pipのアップデート
     pip install --upgrade pip
+
 
 # 作業するディレクトリを変更
 WORKDIR /home/workspase
