@@ -22,6 +22,8 @@ Docker version 20.10.3
 - matplotlib
 - scikit-learn
 - seaborn
+- transformers
+- fugashi
 
 ## イメージ作成：buildコマンド
 ``
