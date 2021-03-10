@@ -3,9 +3,9 @@
 
 # Docker環境構築
 ## バージョン
-``
+```
 Docker version 20.10.3
-``
+```
 
 
 
@@ -27,13 +27,13 @@ Docker version 20.10.3
 - tqdm
 
 ## イメージ作成：buildコマンド
-``
+```
 docker build --rm -t pytorch_env:latest .
-``
+```
 ## コンテナを作成&起動：runコマンド
-``
+```
 docker run --rm -it -v $PWD:/home/workspase --name pytorch_container pytorch_env:latest /bin/bash
-``
+```
 
 ## コンテナに入る：execコマンド
 ```
@@ -44,9 +44,9 @@ docker exec -it pytorch_container bash
 docker-compose は複数のコンテナを同時に立ち上げてくれるもの。  
 オプションを記述することで各コンテナの起動時の設定などができる。  
 これを利用することによってrunコマンド時の煩雑なオプション指定をしなくてもよくなる。  
-``
+```
 docker-compose up -d
-``
+```
 
 ## 参考にしたサイト
 [Dockerで環境構築するための最低限の概念理解](https://qiita.com/minato-naka/items/e9cd026747693759800c)  
