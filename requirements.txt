@@ -6,3 +6,4 @@ seaborn
 optuna
 gensim
 transformers
+fugashi
