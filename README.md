@@ -24,6 +24,7 @@ Docker version 20.10.3
 - seaborn
 - transformers
 - fugashi
+- tqdm
 
 ## イメージ作成：buildコマンド
 ``
@@ -33,6 +34,11 @@ docker build --rm -t pytorch_env:latest .
 ``
 docker run --rm -it -v $PWD:/home/workspase --name pytorch_container pytorch_env:latest /bin/bash
 ``
+
+## コンテナに入る：execコマンド
+```
+docker exec -it pytorch_container bash
+```
 
 ## docker-compose を利用
 docker-compose は複数のコンテナを同時に立ち上げてくれるもの。  
