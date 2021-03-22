@@ -1,13 +1,11 @@
-# shinra_Tutorial 環境構築
-森羅プロジェクトの日本語構造化タスクのチュートリアルの環境構築
+# Docker Pytorch環境構築
+Pytorchでの日本語自然言語処理の分析環境を用意するための Docker イメージ
 
 # Docker環境構築
 ## バージョン
 ```
 Docker version 20.10.3
 ```
-
-
 
 ## パッケージ
 - [pytorch](https://hub.docker.com/r/pytorch/pytorch) (docker hubからPull)
@@ -54,7 +52,4 @@ docker-compose up -d
 [Dockerを使って機械学習の環境を作ろうとした話](https://qiita.com/penpenta/items/3b7a0f1e27bbab56a95f)  
 [日本語自然言語処理で必須の前処理まとめ(Dockerによる環境構築込み)](https://qiita.com/Keyskey/items/9f5f6c414e0f89a4f931)  
 
-## ハマリポイント
-Dockerfile内のapt-get installに「-y」オプションを忘れるとエラーとなる。  
-Docker初学者だったので一連の流れを理解するのに時間がかかった。
 
