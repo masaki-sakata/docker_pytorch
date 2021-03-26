@@ -38,6 +38,16 @@ docker run --rm -it -v $PWD:/home/workspase --name pytorch_container pytorch_env
 docker exec -it pytorch_container bash
 ```
 
+## コンテナ一覧確認：psコマンド
+**実行中**のdockerコンテナの一覧が表示される。
+```
+docker ps
+```
+-a オプションをつけることで終了したコンテナも含めて一覧される。
+```
+docker ps -a
+```
+
 ## docker-compose を利用
 docker-compose は複数のコンテナを同時に立ち上げてくれるもの。  
 オプションを記述することで各コンテナの起動時の設定などができる。  
