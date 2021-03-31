@@ -43,7 +43,7 @@ docker exec -it pytorch_container bash
 ```
 docker ps
 ```
--a オプションをつけることで終了したコンテナも含めて一覧される。
+ **-a**  オプションをつけることで **終了したコンテナも** 含めて一覧表示される。
 ```
 docker ps -a
 ```
