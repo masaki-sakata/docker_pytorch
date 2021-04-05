@@ -58,6 +58,10 @@ docker-compose のあるディレクトリに移動して
 docker-compose up -d
 ```
 
+## vscodeのDocker環境で開発するために
+以下のサイトの「導入方法」を参考にするとできる
+[DockerとRemote Containersでの開発環境が最高過ぎる]https://www.keisuke69.net/entry/2020/06/04/145719
+
 ## 参考にしたサイト
 [Dockerで環境構築するための最低限の概念理解](https://qiita.com/minato-naka/items/e9cd026747693759800c)  
 [docker と docker-compose の初歩](https://qiita.com/hiyuzawa/items/81490020568417d85e86)  
