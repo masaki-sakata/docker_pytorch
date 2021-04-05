@@ -9,4 +9,3 @@ transformers
 fugashi
 tqdm
 mecab-python3
-unidic-lite ipadic
