@@ -10,6 +10,7 @@ RUN apt-get update  && \
     apt-get install -y curl && \
     apt-get install -y zip unzip &&\
     apt-get install -y file && \
+    apt-get install -y wget && \
     ## mecab関連インストール
     apt-get install -y mecab && \
     apt-get install -y libmecab-dev && \
