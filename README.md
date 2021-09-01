@@ -25,6 +25,11 @@ Docker version 20.10.3
 - tqdm
 - apex
 
+## ※以下作業はcloneしたディレクトリ内で行ってください
+```
+cd docker_pytorch/
+```
+
 ## イメージ作成：buildコマンド
 ```
 docker build --rm -t pytorch_env:latest .
