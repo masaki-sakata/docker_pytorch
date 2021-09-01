@@ -23,6 +23,7 @@ Docker version 20.10.3
 - transformers
 - fugashi
 - tqdm
+- apex
 
 ## イメージ作成：buildコマンド
 ```
