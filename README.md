@@ -24,6 +24,7 @@ Docker version 20.10.3
 - fugashi
 - tqdm
 - apex
+- seqeval
 
 ## ※以下作業はcloneしたディレクトリ内で行ってください
 ```
