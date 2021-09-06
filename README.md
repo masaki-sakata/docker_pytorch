@@ -60,7 +60,7 @@ docker ps -a
 ```
 docker start pytorch_container
 ```
-起動後はexecコマンドでは入れます．
+起動後はexecコマンドで入れます．
 
 ## docker-compose を利用
 docker-compose は複数のコンテナを同時に立ち上げてくれるものですが，ひとつのコンテナを立ち上げるのにも便利．  
