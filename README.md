@@ -36,7 +36,7 @@ docker build --rm -t pytorch_env:latest .
 ```
 ## コンテナを作成&起動：runコマンド
 ```
-docker run --rm -it -v $PWD:/home/workspase --name pytorch_container pytorch_env:latest /bin/bash
+docker run -it -v $PWD:/home/workspase --name pytorch_container pytorch_env:latest /bin/bash
 ```
 
 ## コンテナに入る：execコマンド
@@ -45,27 +45,35 @@ docker exec -it pytorch_container bash
 ```
 
 ## コンテナ一覧確認：psコマンド
-**実行中**のdockerコンテナの一覧が表示される。
+**実行中**のdockerコンテナの一覧が表示されます．
 ```
 docker ps
 ```
- **-a**  オプションをつけることで **終了したコンテナも** 含めて一覧表示される。
+ **-a**  オプションをつけることで **終了したコンテナも** 含めて一覧表示されます．
 ```
 docker ps -a
 ```
 
+## コンテナを起動するだけ：startコマンド
+作成したはずのコンテナが`docker ps`をしても表示されない場合は，起動していない可能性があります．  
+以下コマンドでコンテナを起動してください．
+```
+docker start pytorch_container
+```
+起動後はexecコマンドでは入れます．
+
 ## docker-compose を利用
-docker-compose は複数のコンテナを同時に立ち上げてくれるものだが、ひとつのコンテナを立ち上げるのにも便利。  
-docker-compose.ymlにあらかじめオプションを記述することで各コンテナの起動時の設定などができる。  
-これを利用することによってbuildやrunコマンド時の煩雑なオプション指定をいちいち入力しなくてもよくなる。  
+docker-compose は複数のコンテナを同時に立ち上げてくれるものですが，ひとつのコンテナを立ち上げるのにも便利．  
+docker-compose.yml にあらかじめオプションを記述することで各コンテナの起動時の設定などができます．  
+これを利用することによってbuildやrunコマンド時の煩雑なオプション指定をいちいち入力しなくてもよくなります．  
 docker-compose のあるディレクトリに移動して  
-以下のコマンドで **イメージの作成(build)** から **コンテナの起動(run)** まで全て行ってくれる。
+以下のコマンドで **イメージの作成(build)** から **コンテナの起動(run)** まで全て行ってくれます．
 ```
 docker-compose up -d
 ```
 
 ## vscodeのDocker環境で開発するために
-以下のサイトの「導入方法」を参考にするとできる  
+以下のサイトの「導入方法」を参考にするとできます．
 [DockerとRemote Containersでの開発環境が最高過ぎる](https://www.keisuke69.net/entry/2020/06/04/145719)
 
 ## 参考にしたサイト
