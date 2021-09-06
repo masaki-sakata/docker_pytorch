@@ -25,6 +25,7 @@ Docker version 20.10.3
 - tqdm
 - apex
 - seqeval
+- mlflow
 
 ## ※以下作業はcloneしたディレクトリ内で行ってください
 ```
