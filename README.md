@@ -91,7 +91,7 @@ docker exec -it pytorch_container bash
 ```
 
 ## vscodeのDocker環境で開発するために
-以下のサイトの「導入方法」を参考にするとできます．  
+以下のサイトを参考にするとできます．  
 [[Docker / VSCode] VSCodeからリモートマシンのDocker情報にアクセスする](https://qiita.com/siruku6/items/11a9196c395ba4797aec)
 
 ## 参考にしたサイト
