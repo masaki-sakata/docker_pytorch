@@ -30,8 +30,8 @@ https://ngc.nvidia.com/catalog/containers/nvidia:pytorch
 - mlflow
 
 # 実際にコンテナを起動してみる
-コンテナの起動には主にdocker-compose を利用する方法と利用しない方法の2種類あります．  
-2つの方法を以下に紹介します．個人的にはdocker-compose を利用する方法が楽です．  
+コンテナの起動には主に`docker-compose` を利用する方法と利用しない方法の2種類あります．  
+2つの方法を以下に紹介します．**個人的にはdocker-compose を利用する方法が楽です．**  
 **※以下作業はcloneしたディレクトリ内で行ってください**
 ```
 cd docker_pytorch/
