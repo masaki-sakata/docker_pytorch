@@ -9,5 +9,6 @@ transformers
 fugashi
 tqdm
 mecab-python3
+ipadic
 seqeval
 mlflow

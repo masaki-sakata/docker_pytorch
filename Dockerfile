@@ -1,5 +1,5 @@
-# pythonの3.8.0をベースにする
-FROM pytorch/pytorch:latest
+# nvidiaのpytorchを使用する
+FROM nvcr.io/nvidia/pytorch:21.08-py3
 
 RUN apt-get update  && \
     apt-get upgrade -y && \
@@ -36,4 +36,4 @@ RUN pip install -r requirements.txt
 
 # 作業するディレクトリを変更
 # コンテナの内部には入った際のディレクトリの位置を変更している
-WORKDIR /home/workspase/src
+#WORKDIR /home/workspase/src

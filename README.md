@@ -1,14 +1,16 @@
 # Docker Pytorch環境構築
-Pytorchでの日本語自然言語処理の分析環境を用意するための Docker イメージ
+Pytorchでの日本語自然言語処理の分析環境を用意するための Docker ファイル
 
-# Docker環境構築
 ## バージョン
 ```
 Docker version 20.10.3
 ```
+## 使用するDockerイメージ
+nvideaが提供しているPytorchイメージ
+https://ngc.nvidia.com/catalog/containers/nvidia:pytorch
 
 ## パッケージ
-- [pytorch](https://hub.docker.com/r/pytorch/pytorch) (docker hubからPull)
+- pytorch
 - gensim
 - MeCab
   -  mecab-python3
@@ -27,11 +29,32 @@ Docker version 20.10.3
 - seqeval
 - mlflow
 
-## ※以下作業はcloneしたディレクトリ内で行ってください
+# 実際にコンテナを起動してみる
+コンテナの起動には主に`docker-compose` を利用する方法と利用しない方法の2種類あります．  
+2つの方法を以下に紹介します．**個人的にはdocker-compose を利用する方法が楽です．**  
+**※以下作業はcloneしたディレクトリ内で行ってください**
 ```
 cd docker_pytorch/
 ```
 
+# docker-compose を利用する方法
+## イメージを作成 & コンテナを作成&起動
+docker-compose は複数のコンテナを同時に立ち上げてくれるものですが，ひとつのコンテナを立ち上げるのにも便利です．  
+docker-compose.yml にあらかじめオプションを記述することで各コンテナの起動時の設定などができます．  
+これを利用することによって「docker-compose を利用しない方法」に書いてあるようなbuildやrunコマンド時の煩雑なオプション指定をいちいち入力しなくてもよくなります．  
+docker-compose.yml のあるディレクトリに移動して  
+以下のコマンドを打つと **イメージの作成(build)** から **コンテナの作成&起動(run)** まで全て行ってくれます．
+```
+docker-compose up -d
+```
+
+## コンテナに入る：execコマンド
+`docker-compose`を打ったあとは，以下コマンドでコンテナ内に入れます．  
+```
+docker exec -it pytorch_container bash
+```
+
+# docker-compose を利用しない方法
 ## イメージ作成：buildコマンド
 ```
 docker build --rm -t pytorch_env:latest .
@@ -40,12 +63,10 @@ docker build --rm -t pytorch_env:latest .
 ```
 docker run -it -v $PWD:/home/workspase --name pytorch_container pytorch_env:latest /bin/bash
 ```
+上記コマンドを打つと自動的にコンテナ内に入ってくれます．  
 
-## コンテナに入る：execコマンド
-```
-docker exec -it pytorch_container bash
-```
 
+# その他コマンド
 ## コンテナ一覧確認：psコマンド
 **実行中**のdockerコンテナの一覧が表示されます．
 ```
@@ -56,7 +77,7 @@ docker ps
 docker ps -a
 ```
 
-## コンテナを起動するだけ：startコマンド
+## コンテナの起動：startコマンド
 作成したはずのコンテナが`docker ps`をしても表示されない場合は，起動していない可能性があります．  
 以下コマンドでコンテナを起動してください．
 ```
@@ -64,14 +85,9 @@ docker start pytorch_container
 ```
 起動後はexecコマンドで入れます．
 
-## docker-compose を利用
-docker-compose は複数のコンテナを同時に立ち上げてくれるものですが，ひとつのコンテナを立ち上げるのにも便利．  
-docker-compose.yml にあらかじめオプションを記述することで各コンテナの起動時の設定などができます．  
-これを利用することによってbuildやrunコマンド時の煩雑なオプション指定をいちいち入力しなくてもよくなります．  
-docker-compose のあるディレクトリに移動して  
-以下のコマンドで **イメージの作成(build)** から **コンテナの起動(run)** まで全て行ってくれます．
+## コンテナに入る：execコマンド
 ```
-docker-compose up -d
+docker exec -it pytorch_container bash
 ```
 
 ## vscodeのDocker環境で開発するために
