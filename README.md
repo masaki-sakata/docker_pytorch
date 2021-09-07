@@ -6,9 +6,12 @@ Pytorchでの日本語自然言語処理の分析環境を用意するための 
 ```
 Docker version 20.10.3
 ```
+## Dockerイメージ
+nvideaが提供しているPytorchイメージ
+https://ngc.nvidia.com/catalog/containers/nvidia:pytorch
 
 ## パッケージ
-- [pytorch](https://hub.docker.com/r/pytorch/pytorch) (docker hubからPull)
+- pytorch
 - gensim
 - MeCab
   -  mecab-python3
