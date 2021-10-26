@@ -6,7 +6,7 @@ Pytorchでの日本語自然言語処理の分析環境を用意するための 
 Docker version 20.10.3
 ```
 ## 使用するDockerイメージ
-nvideaが提供しているPytorchイメージ
+nvidiaが提供しているPytorchイメージ
 https://ngc.nvidia.com/catalog/containers/nvidia:pytorch
 
 ## パッケージ
