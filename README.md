@@ -61,7 +61,7 @@ docker build --rm -t pytorch_env:latest .
 ```
 ## コンテナを作成&起動：runコマンド
 ```
-docker run -it -v $PWD:/home/workspase --name pytorch_container pytorch_env:latest /bin/bash
+docker run -it -v /home:/home --name pytorch_container pytorch_env:latest /bin/bash
 ```
 上記コマンドを打つと自動的にコンテナ内に入ってくれます．  
 
